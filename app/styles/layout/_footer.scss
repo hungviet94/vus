@@ -1,0 +1,12 @@
+.footer{
+    background-color: #B31C25;
+    color: white;
+    padding: 20px 50px;
+    margin-top: 50px;
+    @include flexbox(center,space-between);
+    &-desc{
+        width: 50%;
+        word-spacing: 2px;
+        text-align: justify;
+    }
+}

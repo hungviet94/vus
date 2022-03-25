@@ -1,0 +1,36 @@
+.program {
+    &-list{
+        @include flexbox(stretch,space-evenly);
+        
+
+    }
+    &-item{
+        width:calc(25% - 2rem);
+        
+    }
+    &-image{
+        
+        width: 100%;
+    }
+    &-title{
+        color: $primary-color;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        margin: 1rem 0 0.5rem;
+        font-weight: bold;
+    }
+    &-desc {
+        color: #636363;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+    @include maxWidth(767px){
+        &-list{
+            display: block;
+        }
+        &-item{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+}   

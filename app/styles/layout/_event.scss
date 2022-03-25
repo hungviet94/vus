@@ -1,0 +1,46 @@
+.event {
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "big big small-2 small-4"
+      "big big small-3 small-5";
+    gap: 3px;
+  }
+  &-content-1{
+      grid-area: big;
+  }
+  &-content-2{
+      grid-area: small-2;
+  }
+  &-content-3{
+      grid-area: small-3;
+  }
+  &-content-4{
+      grid-area: small-4;
+  }
+  &-content-5{
+      grid-area: small-5;
+  }
+  &-content{
+      position: relative;
+      &:first-child .event-title{
+          font-size: 2.4rem;
+          bottom: 8px;
+      }
+  }
+  &-title{
+      position:absolute ;
+      color: white;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      height: auto;
+      text-transform: uppercase;
+      background-color: rgba(99,99,99,0.8);
+  }
+  &-image{
+      width: 100%;
+  }
+}

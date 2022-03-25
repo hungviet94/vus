@@ -1,0 +1,79 @@
+.header {
+  &-top {
+    @include flexbox(stretch, space-between);
+    margin: 1rem 15rem 2rem 0;
+  }
+  &-item {
+    display: inline-block;
+    &:hover {
+      border-bottom: 2px solid $primary-color;
+    }
+  }
+  &-link {
+    font-weight: 600;
+    color: rgb(99, 99, 99);
+    padding: 1.1rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+  }
+  &-list {
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    padding: 1.1rem 0;
+  }
+  &-item-active {
+    border-bottom: 2px solid $primary-color;
+  }
+  &-toggle {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+    // align-self: flex-end;
+    color: $primary-color;
+  }
+  &-carousel {
+    background: url(../images/slider_1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 32.7%;
+  }
+  @include maxWidth(1280px) {
+    &-toggle {
+      display: inline-block;
+    }
+    .header-list {
+      position: fixed;
+      left: 0;
+      top: 10rem;
+      bottom: 0;
+      background-color: #fff;
+      width: 300px;
+      display: inline-block;
+      padding: 20px 25px;
+      z-index: 10;
+      transform: translateX(-100%);
+      transition: transform 0.25s ease-in;
+    }
+    .header-list.is-expand {
+      transform: translateX(0);
+    }
+    &-item {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    &-nav {
+      @include flexbox(stretch, space-between, flex-end);
+    }
+  }
+  @include maxWidth(500px){
+      &-logo{
+          width: 70%;
+          height: 70%;
+      }
+      &-slogan{
+          @include size(70%);
+      }
+  }
+}

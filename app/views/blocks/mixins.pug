@@ -1,0 +1,22 @@
+mixin headerItem(title, active="", href="#" )
+    li.header-item(class=active) 
+        a.header-link(href=href)=title
+
+mixin blockHeader(title, src="../images/line.png") 
+    .blockHeader 
+        h2.blockHeader-title=title 
+        img(src=src).blockHeader-img
+
+mixin programItem(src, title, desc)
+    .program-item 
+            img.program-image(src=src)
+            h3.program-title=title 
+            p.program-desc=desc
+            
+
+mixin eventContent(src, title,area) 
+    .event-content(class=area)
+        img.event-image(src=src)  
+        p.event-title=title  
+        hr.event-hr
+    
